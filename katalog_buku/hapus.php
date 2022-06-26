@@ -3,9 +3,9 @@ include '../koneksi.php';
 
 header("Content-Type: application/json; charset=UTF-8");
 
-$username = $_POST['username'];
+$isbn = $_POST['isbn'];
 
-$query =  "DELETE FROM `user` WHERE username = $username";
+$query =  "DELETE FROM `katalog_buku` WHERE ISBN = $isbn";
 $execute = $dbConn->query($query);
 $response = [];
 
