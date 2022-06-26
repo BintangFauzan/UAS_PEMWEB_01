@@ -7,7 +7,7 @@ $query = "select * from user";
 
 $statement = $dbConn -> query($query);
 $statement->setfetchMode(PDO::FETCH_OBJ);
-$result = $statement->fetchALL();
+$result["akun"] = $statement->fetchALL();
 header("Content-Type: application/json; charset=UTF-8");
 echo json_encode($result);
 
